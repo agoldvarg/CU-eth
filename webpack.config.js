@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // PATHS
 const entryPath = path.join(__dirname, 'src/js', 'index.js');
@@ -51,5 +52,9 @@ module.exports = {
         ],
       },
     ],
-  }
+  },
+  plugins: [new HtmlWebpackPlugin({
+    title: 'Citizens United Ethereum',
+    hash: true,
+  })],
 }
