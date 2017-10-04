@@ -1,5 +1,5 @@
-// var MetaCoin = artifacts.require("./MetaCoin.sol");
+const CitizensUnited = artifacts.require('./CitizensUnited.sol');
 
 module.exports = function(deployer) {
-  // deployer.deploy(MetaCoin);
+  deployer.deploy(CitizensUnited);
 };
