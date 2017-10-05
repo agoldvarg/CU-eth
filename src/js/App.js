@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
+const baseCls = 'App';
+
 class App extends Component {
   render() {
     return (
-      <div>
-
+      <div className={baseCls}>
+        Hello
       </div>
     );
   }
