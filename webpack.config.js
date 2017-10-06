@@ -57,7 +57,7 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Citizens United Ethereum',
+      title: 'CU Ethereum',
       hash: true,
     }),
     new ReactRootPlugin('root'),
