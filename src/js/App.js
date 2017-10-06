@@ -58,29 +58,45 @@ class App extends Component {
       value: web3.toWei(value, 'ether')
     };
 
-    this.contractInstance.setMessage(message, txOptions, (error, result) => {
-      // console.log(error, result);
-    });
+    this.contractInstance.setMessage(message, txOptions, (error, result) => {});
   }
 
   render() {
     return (
       <div className={baseCls}>
-        <div className="meta">
-          cost of speech: {this.state.costOfSpeech}
+        <div className="jumbo">
+          <div className="jumbo__attribute attribute">
+            <div className="attribute__label">
+              cost of speech
+            </div>
+            <div className="attribute__value">
+              {this.state.costOfSpeech}
+            </div>
+          </div>
+          <div className="jumbo__attribute attribute">
+            <div className="attribute__label">
+              tsar
+            </div>
+            <div className="attribute__value">
+              {this.state.tsar}
+            </div>
+          </div>
+          <div className="jumbo__attribute attribute">
+            <div className="attribute__label">
+              message
+            </div>
+            <div className="attribute__value">
+              {this.state.message}
+            </div>
+          </div>
         </div>
-        <div className="meta">
-          tsar: {this.state.tsar}
-        </div>
-        <div className="meta">
-          message: {this.state.message}
-        </div>
+
         <div className="form">
           <label htmlFor="msgInput">message
-          <input name="msgInput" type="text" ref={el => this.msgInput = el} />
+            <input name="msgInput" type="text" ref={el => this.msgInput = el} />
           </label>
           <label htmlFor="valueInput">value
-          <input name="valueInput" type="text" ref={el => this.valueInput = el} />
+            <input name="valueInput" type="text" ref={el => this.valueInput = el} />
           </label>
 
           <button onClick={this.setMessage}>SUBMIT</button>
